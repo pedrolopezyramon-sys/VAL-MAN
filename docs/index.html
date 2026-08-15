@@ -1,13 +1,577 @@
-VAL-MAN
-│
-├── docs
-│   ├── index.html
-│   └── assets
-│       ├── hero-gentleman.jpg
-│       ├── dinner.jpg
-│       ├── event.jpg
-│       ├── culture.jpg
-│       ├── travel.jpg
-│       └── casual.jpg
-│
-└── README.md
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VAL-MAN — The Art of Good Company</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090909;
+    color:#f5efe4;
+    font-family:Georgia,"Times New Roman",serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    padding:30px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:27px;
+    letter-spacing:2px;
+    color:#c9a86a;
+}
+
+.logo span{
+    display:block;
+    font-family:Arial,sans-serif;
+    font-size:8px;
+    letter-spacing:3px;
+    color:#aaa;
+    margin-top:6px;
+}
+
+.menu{
+    display:flex;
+    gap:28px;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.menu a:hover{
+    color:#c9a86a;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:45% 55%;
+}
+
+.hero-text{
+    padding:150px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:#080808;
+}
+
+.small-title{
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:3px;
+    color:#c9a86a;
+}
+
+.hero h1{
+    font-size:clamp(48px,6vw,82px);
+    font-weight:400;
+    line-height:.98;
+    margin:25px 0;
+}
+
+.hero h1 em{
+    color:#c9a86a;
+}
+
+.line{
+    width:120px;
+    height:1px;
+    background:#c9a86a;
+    margin:15px 0 25px;
+}
+
+.subtitle{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.button{
+    display:inline-block;
+    width:max-content;
+    margin-top:32px;
+    padding:14px 22px;
+    border:1px solid #c9a86a;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#c9a86a;
+    color:#111;
+}
+
+.hero-image{
+    background-image:url("../assets/hero-gentleman.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+/* ---------- EXPERIENCIAS ---------- */
+
+section{
+    padding:80px 5%;
+}
+
+.experiences{
+    background:#111;
+}
+
+.center{
+    text-align:center;
+}
+
+.section-title{
+    font-size:38px;
+    font-weight:400;
+    margin:10px 0 45px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+}
+
+.card{
+    background:#151515;
+    text-align:center;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+.card h3{
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:1px;
+    margin:22px 10px 10px;
+}
+
+.card p{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height:1.6;
+    color:#aaa;
+    padding:0 15px 25px;
+}
+
+/* ---------- SOBRE MI ---------- */
+
+.about{
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#0b0b0b;
+}
+
+.about-text{
+    padding:90px 12%;
+}
+
+.about-text h2{
+    font-size:42px;
+    line-height:1.1;
+    font-weight:400;
+    margin:20px 0 30px;
+}
+
+.about-text p{
+    font-family:Arial,sans-serif;
+    color:#bbb;
+    font-size:13px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.about-image{
+    min-height:550px;
+    background:url("../assets/culture.jpg") center/cover;
+}
+
+/* ---------- DESTINOS ---------- */
+
+.destinations{
+    background:#111;
+}
+
+.cities{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.city{
+    height:190px;
+    display:flex;
+    justify-content:center;
+    align-items:end;
+    padding:25px;
+    font-size:18px;
+    letter-spacing:3px;
+    background-size:cover;
+    background-position:center;
+}
+
+.madrid{
+    background-image:
+    linear-gradient(transparent,rgba(0,0,0,.8)),
+    url("../assets/event.jpg");
+}
+
+.barcelona{
+    background-image:
+    linear-gradient(transparent,rgba(0,0,0,.8)),
+    url("../assets/culture.jpg");
+}
+
+.valencia{
+    background-image:
+    linear-gradient(transparent,rgba(0,0,0,.8)),
+    url("../assets/travel.jpg");
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    padding:35px 5%;
+    border-top:1px solid #3b3327;
+    text-align:center;
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#777;
+}
+
+/* ---------- MÓVIL ---------- */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image{
+        min-height:65vh;
+        order:1;
+    }
+
+    .hero-text{
+        order:2;
+        padding:80px 8%;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        min-height:450px;
+    }
+
+    .cities{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <a href="#" class="logo">
+        VAL-MAN
+        <span>THE ART OF GOOD COMPANY</span>
+    </a>
+
+    <div class="menu">
+        <a href="#experiencias">EXPERIENCIAS</a>
+        <a href="#sobre-mi">SOBRE MÍ</a>
+        <a href="#destinos">DESTINOS</a>
+        <a href="#contacto">CONTACTO</a>
+    </div>
+
+</nav>
+
+
+<header class="hero">
+
+    <div class="hero-text">
+
+        <div class="small-title">
+            THE ART OF GOOD COMPANY
+        </div>
+
+        <h1>
+            Compañía<br>
+            que eleva cada<br>
+            <em>experiencia.</em>
+        </h1>
+
+        <div class="line"></div>
+
+        <div class="subtitle">
+            DISCRETO · EDUCADO · CULTO.
+        </div>
+
+        <a href="#contacto" class="button">
+            SOLICITAR UNA EXPERIENCIA
+        </a>
+
+    </div>
+
+    <div class="hero-image"></div>
+
+</header>
+
+
+<section class="experiences" id="experiencias">
+
+    <div class="center">
+
+        <div class="small-title">
+            EXPERIENCIAS
+        </div>
+
+        <h2 class="section-title">
+            Cada momento, a tu manera.
+        </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+        <article class="card">
+
+            <img src="../assets/dinner.jpg">
+
+            <h3>CENAS & COMPAÑÍA</h3>
+
+            <p>
+                Cenas en restaurantes exclusivos y momentos
+                para disfrutar sin mirar el reloj.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="../assets/event.jpg">
+
+            <h3>EVENTOS & CELEBRACIONES</h3>
+
+            <p>
+                Acompañamiento a galas, eventos y celebraciones
+                inolvidables.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="../assets/culture.jpg">
+
+            <h3>CULTURA & CONVERSACIÓN</h3>
+
+            <p>
+                Teatros, exposiciones, conciertos o simplemente
+                buenas conversaciones.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="../assets/travel.jpg">
+
+            <h3>VIAJES PRIVADOS</h3>
+
+            <p>
+                Viajes y escapadas. Tu compañía para que el destino
+                sea parte de la experiencia.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="../assets/casual.jpg">
+
+            <h3>DÍA A DÍA EXCEPCIONAL</h3>
+
+            <p>
+                Planes de día, visitas, compras, paseos o lo que
+                haga que tu día sea especial.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="../assets/hero-gentleman.jpg">
+
+            <h3>NOCHES CON ESTILO</h3>
+
+            <p>
+                Noches en buena compañía: cenas, copas,
+                música y buenos ambientes.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="sobre-mi">
+
+    <div class="about-text">
+
+        <div class="small-title">
+            THE MAN BEHIND VAL-MAN
+        </div>
+
+        <h2>
+            El arte de estar.<br>
+            El valor de la buena compañía.
+        </h2>
+
+        <p>
+            Discreción, educación y cultura son los pilares
+            de mi forma de acompañar.
+        </p>
+
+        <p>
+            Me gusta viajar, descubrir lugares, la cultura,
+            la gastronomía y las conversaciones que dejan huella.
+        </p>
+
+        <p>
+            Mi objetivo es que disfrutes de cada momento
+            y que sea memorable.
+        </p>
+
+        <a href="#contacto" class="button">
+            CONOCE MÁS SOBRE MÍ →
+        </a>
+
+    </div>
+
+    <div class="about-image"></div>
+
+</section>
+
+
+<section class="destinations" id="destinos">
+
+    <div class="center">
+
+        <div class="small-title">
+            MADRID · BARCELONA · VALÈNCIA
+        </div>
+
+        <h2 class="section-title">
+            Disponible para experiencias
+            en las principales ciudades.
+        </h2>
+
+    </div>
+
+
+    <div class="cities">
+
+        <div class="city madrid">
+            MADRID
+        </div>
+
+        <div class="city barcelona">
+            BARCELONA
+        </div>
+
+        <div class="city valencia">
+            VALÈNCIA
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer id="contacto">
+
+    VAL-MAN · THE ART OF GOOD COMPANY
+    <br><br>
+    DISCRECIÓN · ELEGANCIA · CONVERSACIÓN · PRIVACIDAD · RESPETO
+
+</footer>
+
+</body>
+</html>
