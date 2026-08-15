@@ -2,171 +2,38 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="VAL-MAN — Private companionship & experiences. Cenas, eventos, cultura, baile y viajes. València, Madrid, Barcelona y Marbella.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="VAL-MAN — compañía personal y experiencias a medida en València, Madrid y Barcelona.">
 <title>VAL-MAN — The Art of Good Company</title>
 <style>
-:root{
-  --ink:#171717; --muted:#6f6b65; --cream:#f5f1e9; --paper:#fbfaf7;
-  --bronze:#a98a63; --line:#ddd6ca;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-h1,h2,h3,.brand{font-family:"Baskerville","Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,"Times New Roman",serif;font-weight:400}
-a{color:inherit}
-.container{width:min(1120px,92%);margin:auto}
-nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:24px 4%;color:white}
-.brand{font-size:27px;letter-spacing:.16em}
-nav a{text-decoration:none;margin-left:24px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-.hero{min-height:92vh;display:grid;place-items:end;position:relative;background:
-linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.42) 38%,rgba(0,0,0,.03) 70%),
-url("hero-gentleman.jpg") center 25%/cover no-repeat;color:white}
-.hero-inner{padding:0 0 8vh;max-width:520px;margin-right:auto;margin-left:6%;text-align:left}
-.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px;color:#e9dfcf}
-h1{font-size:clamp(48px,7vw,82px);line-height:.95;margin:0 0 14px;letter-spacing:.13em}
-.tagline{font-family:"Baskerville","Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:clamp(24px,3vw,36px);font-style:italic;margin:0 0 18px}
-.lead{font-size:18px;max-width:640px;color:#f3eee6}
-.btn{display:inline-block;margin-top:26px;padding:15px 23px;border:1px solid rgba(255,255,255,.7);text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-section{padding:90px 0}
-.intro{background:var(--cream)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
-h2{font-size:44px;line-height:1.1;margin:12px 0 22px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.card{background:var(--paper);padding:32px}
-.card h3{font-size:26px;margin:10px 0}
-.price{font-family:Georgia,serif;font-size:20px;margin-top:20px}
-.about img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:center}
-.quote{background:#1c1b19;color:white;text-align:center}
-.quote blockquote{font-family:Georgia,serif;font-size:clamp(30px,4vw,52px);line-height:1.2;max-width:900px;margin:0 auto;font-style:italic}
-.profile{font-size:18px;color:#3e3a35}
-.form-wrap{max-width:760px;margin:auto}
-form{display:grid;gap:15px;margin-top:30px}
-input,select,textarea{width:100%;padding:15px;border:1px solid #cfc7bb;background:white;font:inherit}
-textarea{min-height:130px}
-.form-btn{border:0;background:var(--ink);color:white;padding:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-.note{font-size:12px;color:var(--muted);margin-top:12px}
-footer{padding:35px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-@media(max-width:760px){
- nav{padding:20px 5%} nav .links{display:none}
- .hero{min-height:86vh;background-position:56% center}
- .hero-inner{padding:0 5% 7vh;margin:0;max-width:470px}
- .grid2,.cards{grid-template-columns:1fr}
- section{padding:65px 0}
- h2{font-size:36px}
-}
-
-.gallery{background:var(--paper)}
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.gallery-grid img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
-@media(max-width:760px){.gallery-grid{grid-template-columns:1fr}}
-
+:root{--bg:#090909;--panel:#111;--gold:#c39a5a;--cream:#f3eee6;--muted:#b9b1a6;--line:#3a2d1d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}.serif{font-family:Baskerville,"Iowan Old Style","Palatino Linotype",Georgia,serif}.wrap{width:min(1180px,92%);margin:auto}
+nav{position:absolute;z-index:10;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:28px 4%;background:linear-gradient(#000b,transparent);}.brand{font:400 31px/1 Baskerville,Georgia,serif;letter-spacing:.13em;color:#e4c28d}.subbrand{font-size:10px;letter-spacing:.24em;margin-top:8px;color:#cfc5b6}.links{display:flex;gap:28px;text-transform:uppercase;font-size:11px;letter-spacing:.12em}.links a{text-decoration:none}.links a:hover{color:var(--gold)}
+.hero{min-height:760px;height:94vh;max-height:900px;position:relative;display:flex;align-items:flex-end;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.75) 29%,rgba(0,0,0,.18) 70%,rgba(0,0,0,.15)),url('assets/hero-gentleman.jpg') center/cover no-repeat}.hero:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,var(--bg))}.hero-copy{position:relative;z-index:2;padding-bottom:90px;max-width:590px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.24em;text-transform:uppercase}.hero h1{font:400 clamp(50px,7vw,88px)/.95 Baskerville,Georgia,serif;margin:18px 0 10px}.hero h1 em{color:#c99550;font-style:italic}.hero .tag{font-size:13px;letter-spacing:.22em;text-transform:uppercase}.cta{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--gold);padding:15px 22px;margin-top:28px;text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.13em;color:#f0d09b}.cta:hover{background:#c39a5a;color:#090909}
+section{padding:88px 0}.section-head{text-align:center;margin-bottom:42px}.section-head .eyebrow{display:block;margin-bottom:8px}.section-head h2{font:400 clamp(34px,4vw,54px)/1.1 Baskerville,Georgia,serif;margin:0}.experiences{background:#0c0c0c}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2b2116}.card{background:#111;overflow:hidden}.card img{width:100%;height:300px;display:block;object-fit:cover}.card-body{padding:25px 24px 29px}.card h3{font:400 25px/1.05 Baskerville,Georgia,serif;margin:0 0 10px}.card p{color:#bdb5aa;font-size:14px;margin:0}.goldline{width:52px;height:1px;background:var(--gold);margin:0 0 18px}
+.about{background:#0a0a0a}.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.about-copy{padding:55px 7%;background:#0d0d0d}.about-copy h2{font:400 clamp(38px,4vw,58px)/1.05 Baskerville,Georgia,serif;margin:10px 0 24px}.about-copy p{color:#c2bbb1;max-width:520px}.about-img{min-height:520px;background:url('assets/culture.jpg') center/cover no-repeat}
+.destinations{border-top:1px solid #231a10;border-bottom:1px solid #231a10;background:#0b0b0b}.dest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.dest{position:relative;min-height:180px;display:flex;align-items:flex-end;padding:25px;background:linear-gradient(180deg,transparent,#000c),radial-gradient(circle at 70% 20%,#695034,#17130f 65%);border:1px solid #2b2117;overflow:hidden}.dest:nth-child(2){background:linear-gradient(180deg,transparent,#000c),radial-gradient(circle at 25% 30%,#4d5560,#17130f 65%)}.dest:nth-child(3){background:linear-gradient(180deg,transparent,#000c),radial-gradient(circle at 70% 30%,#5a705f,#17130f 65%)}.dest span{font:400 26px Baskerville,Georgia,serif;letter-spacing:.08em}.dest small{display:block;color:#c1b7aa;margin-top:4px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.values{background:#0e0e0e}.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;text-align:center}.value{padding:15px}.icon{font-size:28px;color:var(--gold);margin-bottom:10px}.value h3{font:400 19px Baskerville,Georgia,serif;margin:0 0 7px}.value p{font-size:12px;color:#a9a198;margin:0}
+.contact{background:#0a0a0a}.contact-box{max-width:820px;margin:auto;text-align:center;padding:10px}.contact h2{font:400 clamp(40px,5vw,62px)/1.05 Baskerville,Georgia,serif;margin:8px 0 18px}.contact p{color:#b9b1a6;max-width:600px;margin:0 auto}.contact .cta{margin-top:30px}
+footer{border-top:1px solid #241b12;padding:24px 0;color:#7f786f;font-size:10px;letter-spacing:.08em;text-transform:uppercase}footer .wrap{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:820px){.links{display:none}.hero{min-height:700px;height:88vh;background-position:58% center}.hero-copy{padding:0 0 60px}.cards,.dest-grid{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}.about-img{min-height:420px;order:-1}.value-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){nav{padding:20px 5%}.brand{font-size:26px}.hero{min-height:680px;background-position:61% center}.hero-copy{padding-bottom:45px}.hero h1{font-size:54px}.cards,.dest-grid,.value-grid{grid-template-columns:1fr}.card img{height:330px}.about-copy{padding:45px 7%}section{padding:68px 0}footer .wrap{display:block}.subbrand{font-size:8px}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="brand">VAL-MAN</div>
-  <div class="links"><a href="#experiencias">Experiencias</a><a href="#perfil">Perfil</a><a href="#contacto">Contacto</a></div>
-</nav>
-
-<header class="hero">
-  <div class="container hero-inner">
-    <div class="kicker">Private companionship & experiences</div>
-    <h1>VAL-MAN</h1>
-    <p class="tagline">The art of good company.</p>
-    <p class="lead">No es cuestión de estar acompañado. Es cuestión de estar bien acompañado.</p>
-    <a class="btn" href="#contacto">Solicitar una experiencia privada</a>
-  </div>
-</header>
-
-<section class="intro">
-  <div class="container grid2">
-    <div>
-      <div class="eyebrow">Una forma diferente de compartir el tiempo</div>
-      <h2>Buenos momentos merecen buena compañía.</h2>
-    </div>
-    <div class="profile">
-      <p>VAL-MAN ofrece acompañamiento privado para cenas, eventos, cultura, baile, viajes y ocasiones especiales.</p>
-      <p>Una propuesta basada en la educación, la conversación, la presencia y la discreción.</p>
-      <p>Servicio personal y privado, siempre mediante reserva previa.</p>
-    </div>
-  </div>
-</section>
-
-<section id="experiencias">
-  <div class="container">
-    <div class="eyebrow">Private experiences</div>
-    <h2>Elige el momento.</h2>
-    <div class="cards">
-      <article class="card"><div class="eyebrow">01</div><h3>Dinner</h3><p>Una cena, un restaurante especial y una conversación agradable.</p><div class="price">Desde 295 €</div></article>
-      <article class="card"><div class="eyebrow">02</div><h3>Evening</h3><p>Una velada completa para disfrutar de una cena, evento, baile o actividad.</p><div class="price">Desde 495 €</div></article>
-      <article class="card"><div class="eyebrow">03</div><h3>Signature</h3><p>Una experiencia personalizada diseñada alrededor de la ocasión.</p><div class="price">Desde 750 €</div></article>
-      <article class="card"><div class="eyebrow">04</div><h3>City</h3><p>Acompañamiento en Madrid, Barcelona, Marbella y otras ciudades.</p><div class="price">Desde 950 €</div></article>
-      <article class="card"><div class="eyebrow">05</div><h3>Travel</h3><p>Escapadas y viajes con una duración y destino definidos de forma privada.</p><div class="price">Desde 1.500 €/día</div></article>
-      <article class="card"><div class="eyebrow">06</div><h3>Private</h3><p>Si tienes una idea diferente, cuéntamela y estudiaremos la experiencia.</p><div class="price">Consulta privada</div></article>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="perfil">
-  <div class="container grid2">
-    <div><img src="culture.jpg" alt="VAL-MAN"></div>
-    <div>
-      <div class="eyebrow">The man behind VAL-MAN</div>
-      <h2>Educación. Conversación. Saber estar.</h2>
-      <div class="profile">
-        <p>50 años. Empresario. Viajero. Amante de la gastronomía, la cultura y las buenas conversaciones.</p>
-        <p>Me siento cómodo tanto en una cena tranquila como en una gala, un teatro, una exposición o una escapada de fin de semana.</p>
-        <p>No busco ser el protagonista de la experiencia. Quiero que tú disfrutes de ella.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="gallery">
-  <div class="container">
-    <div class="eyebrow">VAL-MAN lifestyle</div>
-    <h2>Different moments. The same good company.</h2>
-    <div class="gallery-grid">
-      <img src="dinner.jpg" alt="VAL-MAN en una cena">
-      <img src="event.jpg" alt="VAL-MAN en un evento">
-      <img src="travel.jpg" alt="VAL-MAN viajando">
-      <img src="casual.jpg" alt="VAL-MAN en un momento informal">
-    </div>
-  </div>
-</section>
-
-<section class="quote">
-  <div class="container">
-    <blockquote>“No es cuestión de estar acompañado. Es cuestión de estar bien acompañado.”</blockquote>
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="container form-wrap">
-    <div class="eyebrow">Private request</div>
-    <h2>¿Tienes un plan?</h2>
-    <p class="profile">Cuéntame la ocasión, la ciudad y la fecha. No necesitas saber qué experiencia elegir; podemos definirla juntos.</p>
-    <form action="mailto:TU_EMAIL_AQUI" method="post" enctype="text/plain">
-      <input name="Nombre" placeholder="Nombre" required>
-      <input name="Ciudad" placeholder="Ciudad" required>
-      <input name="Fecha" placeholder="Fecha aproximada">
-      <select name="Experiencia">
-        <option value="">Tipo de experiencia</option>
-        <option>Cena</option><option>Evento</option><option>Baile</option><option>Cultura</option><option>Viaje</option><option>Otra</option>
-      </select>
-      <input name="Contacto" placeholder="Teléfono / WhatsApp" required>
-      <textarea name="Mensaje" placeholder="Cuéntame brevemente qué tienes previsto"></textarea>
-      <button class="form-btn" type="submit">Solicitar experiencia privada</button>
-    </form>
-    <p class="note">La información se tratará de forma confidencial. Servicio de acompañamiento social y personal mediante reserva previa.</p>
-  </div>
-</section>
-
-<footer>
-  <div class="container">VAL-MAN · València · Madrid · Barcelona · Marbella · Private travel</div>
-</footer>
-</body>
-</html>
+<nav><div><div class="brand">VAL-MAN</div><div class="subbrand">THE ART OF GOOD COMPANY</div></div><div class="links"><a href="#experiencias">Experiencias</a><a href="#sobre-mi">Sobre mí</a><a href="#destinos">Destinos</a><a href="#contacto">Contacto</a></div></nav>
+<header class="hero"><div class="wrap hero-copy"><div class="eyebrow">Compañía personal · Experiencias privadas</div><h1>Compañía que eleva cada <em>experiencia.</em></h1><div class="tag">Discreto · Educado · Culto</div><a class="cta" href="#contacto">Solicitar una experiencia <span>→</span></a></div></header>
+<section id="experiencias" class="experiences"><div class="wrap"><div class="section-head"><span class="eyebrow">Experiencias</span><h2>Cada momento, a tu manera.</h2></div><div class="cards">
+<article class="card"><img src="assets/dinner.jpg" alt="Cena y compañía"><div class="card-body"><div class="goldline"></div><h3>Cenas & compañía</h3><p>Cenas, restaurantes y conversaciones para disfrutar sin mirar el reloj.</p></div></article>
+<article class="card"><img src="assets/event.jpg" alt="Eventos y celebraciones"><div class="card-body"><div class="goldline"></div><h3>Eventos & celebraciones</h3><p>Acompañamiento a galas, eventos y celebraciones con discreción y elegancia.</p></div></article>
+<article class="card"><img src="assets/culture.jpg" alt="Cultura y conversación"><div class="card-body"><div class="goldline"></div><h3>Cultura & conversación</h3><p>Teatro, exposiciones, conciertos o simplemente una buena conversación.</p></div></article>
+<article class="card"><img src="assets/travel.jpg" alt="Viajes privados"><div class="card-body"><div class="goldline"></div><h3>Viajes privados</h3><p>Escapadas y viajes en los que la compañía forma parte de la experiencia.</p></div></article>
+<article class="card"><img src="assets/casual.jpg" alt="Día a día excepcional"><div class="card-body"><div class="goldline"></div><h3>Día a día excepcional</h3><p>Visitas, paseos, compras, gastronomía o aquello que haga especial tu día.</p></div></article>
+<article class="card"><img src="assets/hero-gentleman.jpg" alt="Noches con estilo"><div class="card-body"><div class="goldline"></div><h3>Noches con estilo</h3><p>Una cena, una copa, música y los mejores ambientes, siempre con buen gusto.</p></div></article>
+</div></div></section>
+<section id="sobre-mi" class="about"><div class="wrap about-grid"><div class="about-copy"><span class="eyebrow">The man behind VAL-MAN</span><h2>El arte de estar.<br>El valor de la buena compañía.</h2><div class="goldline"></div><p>Discreción, educación y cultura son los pilares de mi forma de acompañar.</p><p>Me gusta viajar, descubrir lugares, la gastronomía, el baile, la cultura y esas conversaciones que dejan huella.</p><p>Mi objetivo es sencillo: que disfrutes de cada momento y que sea memorable.</p><a class="cta" href="#contacto">Conocer más sobre mí →</a></div><div class="about-img" aria-label="Retrato de VAL-MAN"></div></div></section>
+<section id="destinos" class="destinations"><div class="wrap"><div class="section-head"><span class="eyebrow">Disponible en</span><h2>Madrid · Barcelona · València</h2></div><div class="dest-grid"><div class="dest"><div><span>Madrid</span><small>Elegancia y cultura</small></div></div><div class="dest"><div><span>Barcelona</span><small>Gastronomía y estilo</small></div></div><div class="dest"><div><span>València</span><small>Origen · Mediterráneo</small></div></div></div></div></section>
+<section class="values"><div class="wrap"><div class="value-grid"><div class="value"><div class="icon">◇</div><h3>Discreción absoluta</h3><p>Privacidad y máxima reserva.</p></div><div class="value"><div class="icon">♢</div><h3>Elegancia y presentación</h3><p>Una presencia cuidada en cada ocasión.</p></div><div class="value"><div class="icon">○</div><h3>Conversación y saber estar</h3><p>Cultura, escucha y buena compañía.</p></div><div class="value"><div class="icon">♙</div><h3>Respeto y confianza</h3><p>Un servicio personal y profesional.</p></div></div></div></section>
+<section id="contacto" class="contact"><div class="wrap contact-box"><span class="eyebrow">Una experiencia a medida</span><h2>Hablemos de lo que buscas.</h2><p>Cada experiencia es privada y personalizada. Cuéntame qué tienes en mente, dónde y cuándo, y te responderé personalmente.</p><a class="cta" href="mailto:contacto@val-man.com?subject=Solicitud%20de%20experiencia%20VAL-MAN">Solicitar una experiencia →</a></div></section>
+<footer><div class="wrap"><span>© 2026 VAL-MAN · THE ART OF GOOD COMPANY</span><span>Aviso legal · Privacidad</span></div></footer>
+</body></html>
